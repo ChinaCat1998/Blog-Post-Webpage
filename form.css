@@ -1,0 +1,158 @@
+/*
+  Form Styles
+*/
+:root {
+    --light-accent: #f9f9fb;
+    --circle-color: #f1b826;
+    --dark-accent: #222;
+}
+
+/*
+  Tags
+*/
+aside {
+  background: linear-gradient(
+    var(--light-accent), 
+    var(--circle-color), 
+    var(--dark-accent)
+  );
+  clip-path: circle(25rem at center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside, 
+section {
+  flex: 1 1 50%;
+}
+
+aside > h2 {
+  font-size: 4rem;
+  color: white;
+  text-shadow: 1px 1px 1px var(--dark-accent);
+}
+
+form {
+  display: flex;
+  flex-flow: column wrap;
+  position: relative;
+  text-align: center;
+}
+
+form ul li {
+    list-style: none;
+}
+
+form > *:not(label) {
+  margin: 1rem 0;
+  padding: 0.5rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+input[type=submit] {
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+input[type=submit]:active {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .5);
+  background-color: var(--dark-accent);
+}
+
+input[type=submit]:hover {
+  border-style: inset;
+  background-color: var(--dark-accent-action);
+}
+
+input,
+textarea {
+  border-radius: 4px;
+  border-width: 1px;
+  font-size: 1rem;
+  background-color: var(--light-accent);
+}
+
+section {
+  padding: 2rem;
+  display: flex;
+  align-items: stretch;
+  flex-flow: column wrap;
+  justify-content: center;
+  border-left: double 1rem;
+}
+/*
+  Classes
+*/
+.dark section {
+  border-left: solid .5rem var(--disabled);
+}
+
+/*
+  IDs
+*/
+#error {
+  color: var(--error);
+  opacity: .75;
+  position: absolute;
+  bottom: -2rem;
+}
+#content {
+    justify-content: center;
+    align-items: center;
+    margin-top: 0%;
+    padding: 40px;
+    text-align: left;
+    
+}
+li#content {
+    text-align: left;
+    padding: 0%;
+    
+}
+li#title {
+    text-align: left;
+    padding: 0%;
+}
+li#username {
+    text-align: left;
+    padding: 0%;
+}
+input#username {
+    max-width: 100%;
+}
+input#title {
+    max-width: 100%;
+}
+input#content {
+    max-width: 100%;
+}
+textarea#content {
+    max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  aside {
+    clip-path: circle(15rem at center);
+    flex-shrink: 25%;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    position: relative;
+
+  }
+}
